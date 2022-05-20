@@ -14,7 +14,7 @@ namespace Code9.Cinema.Domain.Services
             _cinemaRepository = cinemaRepository;
         }
 
-        public IEnumerable<CinemaDomainModel> GetAllAsync()
+        public IEnumerable<CinemaDomainModel> GetAll()
         {
             var cinemas = _cinemaRepository.GetAll();
 

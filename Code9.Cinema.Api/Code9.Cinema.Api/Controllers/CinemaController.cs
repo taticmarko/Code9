@@ -26,7 +26,7 @@ namespace Code9.Cinema.Api.Controllers
         {
             IEnumerable<CinemaDomainModel> cinemaDomainModels;
 
-            cinemaDomainModels = _cinemaService.GetAllAsync();
+            cinemaDomainModels = _cinemaService.GetAll();
 
             if (cinemaDomainModels == null)
             {

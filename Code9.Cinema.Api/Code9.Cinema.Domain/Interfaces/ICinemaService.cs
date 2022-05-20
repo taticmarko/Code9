@@ -5,6 +5,6 @@ namespace Code9.Cinema.Domain.Interfaces
 {
     public interface ICinemaService
     {
-        IEnumerable<CinemaDomainModel> GetAllAsync();
+        IEnumerable<CinemaDomainModel> GetAll();
     }
 }

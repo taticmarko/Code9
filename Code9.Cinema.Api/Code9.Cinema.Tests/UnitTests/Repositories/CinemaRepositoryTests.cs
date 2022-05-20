@@ -9,7 +9,7 @@ namespace Code9.Cinema.Tests.UnitTests.Repositories
     {
         public CinemaRepositoryTests()
         {
-
+            DataBase.MockCinemaDataBase();
         }
 
         [Fact]
@@ -21,7 +21,7 @@ namespace Code9.Cinema.Tests.UnitTests.Repositories
 
             // Assert
             Assert.NotNull(getAllCinemas);
-            Assert.Equal(DataBase.GetCinemasTable().Count, getAllCinemas.ToList().Count);
+            Assert.Equal(DataBase.GetCinemas().Count, getAllCinemas.ToList().Count);
         }
     }
 }

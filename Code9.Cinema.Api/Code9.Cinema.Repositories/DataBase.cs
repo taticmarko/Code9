@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Code9.Cinema.Infrastructure
 {
     public static class DataBase
     {
-        public static List<Models.Cinema> GetCinemasTable()
+        public static List<Models.Cinema> Cinemas{ get; set; }
+
+        public static void MockCinemaDataBase()
         {
-            return new List<Models.Cinema>()
+            Cinemas = new List<Models.Cinema>()
             {
                 new Models.Cinema()
                 {
@@ -59,6 +60,11 @@ namespace Code9.Cinema.Infrastructure
                 Street = "Novosadski put 90"
                 }
             };
+        }
+
+        public static List<Models.Cinema> GetCinemas()
+        {
+            return Cinemas;
         }
     }
 }

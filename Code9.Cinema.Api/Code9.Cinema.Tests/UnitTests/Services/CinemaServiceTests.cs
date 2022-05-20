@@ -11,7 +11,7 @@ namespace Code9.Cinema.Tests.UnitTests.Services
 {
     public class CinemaServiceTests
     {
-        private Mock<ICinemaRepository> _mockCinemaRepository;
+        private readonly Mock<ICinemaRepository> _mockCinemaRepository;
 
         public CinemaServiceTests()
         {
@@ -68,8 +68,8 @@ namespace Code9.Cinema.Tests.UnitTests.Services
 
             // Act
             var cinemaService = new CinemaService(_mockCinemaRepository.Object);
-            var getCinemas = cinemaService.GetAllAsync().ToList();
-
+            var getCinemas = cinemaService.GetAll().ToList();
+            
             // Assert
             Assert.NotNull(getCinemas);
             Assert.Equal(expectedCinemasCollection.Count, getCinemas.Count);

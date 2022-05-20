@@ -25,7 +25,7 @@ namespace Code9.Cinema.Api
             services.AddControllers();
             services.AddOpenApiDocument(settings =>
             {
-                settings.Title = "Levi Code9 :)";
+                settings.Title = "Levi9 Code9 2022";
             });
 
             // Repositories

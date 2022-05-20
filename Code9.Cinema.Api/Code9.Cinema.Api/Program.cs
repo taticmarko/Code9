@@ -1,11 +1,6 @@
+using Code9.Cinema.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Code9.Cinema.Api
 {
@@ -13,6 +8,7 @@ namespace Code9.Cinema.Api
     {
         public static void Main(string[] args)
         {
+            DataBase.MockCinemaDataBase();
             CreateHostBuilder(args).Build().Run();
         }
 

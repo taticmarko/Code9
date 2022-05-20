@@ -11,7 +11,7 @@ namespace Code9.Cinema.Tests.UnitTests.Controllers
 {
     public class CinemaControllerTests
     {
-        private Mock<ICinemaService> _mockCinemaService;
+        private readonly Mock<ICinemaService> _mockCinemaService;
 
         public CinemaControllerTests()
         {
@@ -45,7 +45,7 @@ namespace Code9.Cinema.Tests.UnitTests.Controllers
             };
 
             _mockCinemaService
-                .Setup(x => x.GetAllAsync())
+                .Setup(x => x.GetAll())
                 .Returns(cinemasCollection);
 
             // Act

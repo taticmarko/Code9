@@ -7,7 +7,7 @@ namespace Code9.Cinema.Infrastructure.Repositories
     {
         public IEnumerable<Models.Cinema> GetAll()
         {
-            return DataBase.GetCinemasTable();
+            return DataBase.GetCinemas();
         }
     }
 }
